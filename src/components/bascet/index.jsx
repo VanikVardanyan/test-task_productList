@@ -86,12 +86,12 @@ const Bascet = () => {
       <Modal
         show={showModal}
         onClose={handleToggleModal}
-        title="Check pokupki"
+        title="Receipt"
         onSubmit={() => {}}
       >
         <div className="modal_container">
           {useSelector(getBascetProduct).map((items) => (
-            <div className="modal_body">
+            <div className="modal_body" key={items.id}>
               <div>
                 name:
                 {items.name}

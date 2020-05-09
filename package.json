@@ -1,20 +1,23 @@
 {
   "name": "test-task",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "./",
+  "private": false,
+  "basename": "/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "nanoid": "^3.1.5",
     "node-sass": "^4.14.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
-    "prop-types": "^15.7.2"
+    "redux-persist": "^6.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -48,6 +51,6 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1"
   },
-  "author": "",
+  "author": "Vno",
   "license": "ISC"
 }
