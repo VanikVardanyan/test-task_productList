@@ -1,0 +1,62 @@
+.buy_card {
+  width: 90%;
+  margin: auto;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.total_amount {
+  width: 200px;
+  color: blue;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.buy_products_btn {
+ width: 100px;
+ height: 40px;
+ color: chartreuse;
+ font-size: 20px;
+ font-weight: bold;
+ border-radius: 8px;
+ outline: none;
+ background-color: cornflowerblue;
+}
+
+.total_amout-number {
+  color: green;
+}
+
+.total_amout-number:after {
+  content: '$';
+  margin-left: 5px;
+}
+
+.product_sum {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.modal_body {
+  width: 100%;
+  display: flex;
+  padding: 2px 15px;
+  justify-content: space-between;
+}
+
+.modal_container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modal_total_amount {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+}

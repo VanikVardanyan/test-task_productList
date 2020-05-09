@@ -1,0 +1,1 @@
+export const getProductItems = (state) => state.product.items

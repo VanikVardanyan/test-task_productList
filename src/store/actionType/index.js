@@ -1,0 +1,3 @@
+export const PRODUCT_ACTIVE = 'PRODUCT_ACTIVE';
+export const ADD_PRODUCT = 'ADD_PRODUCT';
+export const QUANTITY_PRODUCT = 'QUANTITY_PRODUCT';

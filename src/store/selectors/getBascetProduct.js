@@ -1,0 +1,1 @@
+export const getBascetProduct = state => state.product.bascetProducts;
