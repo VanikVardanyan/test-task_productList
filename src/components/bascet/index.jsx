@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import Modal from '../Modal';
 import { getBascetProduct } from '../../store/selectors/getBascetProduct';
-import { quantityProduct } from '../../store/action';
+import { quantityProduct, removeBascetProduct } from '../../store/action';
 
 import './style.scss';
 
@@ -27,16 +27,22 @@ const Bascet = () => {
   const handleToggleModal = () => {
     setShowModal(!showModal);
   };
+  const handleRemove = (e) => {
+    const { id } = e.target.dataset;
+    dispatch(removeBascetProduct(id));
+  };
 
   return (
     <>
       <div>
-        <h1>Bascet</h1>
-        <Link to="/"> Home </Link>
+        <div className="titleBox">
+          <h1>Bascet</h1>
+          <Link to="/" className="BascetName"> come back home </Link>
+        </div>
         <div className="home_body">
           {bascetProducts.length ? null : 'no products'}
           {bascetProducts.map((product) => (
-            <div className="home_product_card" key={product.id}>
+            <div className="home_product_card bascet" key={product.id}>
               <div
                 className="home_product_card-image"
                 style={{ backgroundImage: `url(${product.img})` }}
@@ -46,6 +52,15 @@ const Bascet = () => {
                 <div className="home_product_card-sale-price">
                   {product.sale * product.quantity}
                   <span className="dollar">$</span>
+                </div>
+                <div className="home_product_card-remove-button">
+                  <button
+                    type="button"
+                    onClick={handleRemove}
+                    data-id={product.id}
+                  >
+                    remove
+                  </button>
                 </div>
               </div>
               <div className="product_sum">

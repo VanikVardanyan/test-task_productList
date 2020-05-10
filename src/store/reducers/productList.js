@@ -1,4 +1,6 @@
-import { PRODUCT_ACTIVE, ADD_PRODUCT, QUANTITY_PRODUCT } from '../actionType';
+import {
+  PRODUCT_ACTIVE, ADD_PRODUCT, QUANTITY_PRODUCT, REMOVE_PRODUCT,
+} from '../actionType';
 import mockData from '../mockData';
 
 const initialState = {
@@ -39,6 +41,14 @@ export default (state = initialState, action) => {
         }
       ));
       return { items: state.items, bascetProducts: [...quantityProduct] };
+    }
+    case REMOVE_PRODUCT: {
+      const removeProducts = state.bascetProducts.filter((item) => item.id !== action.id);
+      const returnActive = state.items.map((product) => ({
+        ...product,
+        active: product.id === action.id ? !product.active : product.active,
+      }));
+      return { items: returnActive, bascetProducts: removeProducts };
     }
     default: return state;
   }

@@ -1,17 +1,24 @@
-import { PRODUCT_ACTIVE, ADD_PRODUCT, QUANTITY_PRODUCT } from "../actionType";
+import {
+  PRODUCT_ACTIVE, ADD_PRODUCT, QUANTITY_PRODUCT, REMOVE_PRODUCT,
+} from '../actionType';
 
-export const productActive = id => ({
+export const productActive = (id) => ({
   type: PRODUCT_ACTIVE,
-  id
+  id,
 });
 
-export const addProduct = id => ({
+export const addProduct = (id) => ({
   type: ADD_PRODUCT,
-  id
+  id,
 });
 
-export const quantityProduct = (id,quantity) => ({
+export const quantityProduct = (id, quantity) => ({
   type: QUANTITY_PRODUCT,
   id,
   quantity,
+});
+
+export const removeBascetProduct = (id) => ({
+  type: REMOVE_PRODUCT,
+  id,
 });

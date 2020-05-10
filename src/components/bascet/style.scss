@@ -1,9 +1,30 @@
+.BascetName {
+  color: firebrick;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+}
+.titleBox{
+width: 200px;
+margin: auto;
+text-align: center;
+}
+
 .buy_card {
   width: 90%;
   margin: auto;
   margin-top: 15px;
   display: flex;
   justify-content: center;
+}
+
+.bascet{
+  width: 300px;
+  height: 100%;
+  margin-top: 15px;
+  border: 1px solid gold;
+  border-radius: 8px;
 }
 
 .total_amount {
@@ -59,4 +80,11 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 15px;
+}
+
+.home_product_card-remove-button > button{
+  color: royalblue;
+  padding: 5px 5px;
+  font-weight: bold;
+  background-color: tan;
 }
